@@ -1,0 +1,118 @@
+:root {
+    --light-gray: #f7f8fa;
+    --text-gray: #555e6d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Satoshi", sans-serif;
+    color: var(--text-gray);
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--light-gray);
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+
+#head-ribbon {
+    display: flex;
+    height: 4rem;
+    padding: 10px;
+    background-color: #fff;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border-bottom: 1px solid rgb(230, 234, 242);
+}
+i {
+    color: white;
+}
+
+.content-wrapper {
+    display: flex;
+    margin: auto;
+    width: fit-content;
+    padding-top: 100px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1; /* Allow content to grow and take up remaining space */
+}
+
+.content-title {
+    width: auto;
+    font-size: 3.25rem;
+    font-weight: 900;
+}
+
+.content-subtext {
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+
+#footer-ribbon {
+    display: flex;
+    justify-content: center;
+    background-color: #555e6d;
+    padding: 7px;
+    margin-top: 20px;
+    font-size: 0.75rem;
+    color: #fff;
+    width: 100%;
+}
+
+.popup-form {
+    display: none;
+    flex-direction: column;
+    border: 5px solid rgb(230, 234, 242);
+    border-radius: 10px;
+    margin: 20px;
+    padding: 25px;
+    background-color: #fff;
+    color: var(--text-gray);
+    width: -webkit-fill-available;
+}
+.form-nav-buttons-container {
+    display: flex;
+    justify-content: space-between;
+}
+.form-nav-buttons {
+    min-width: 30%;
+}
+.btn-end {
+    background-color: #9e2c2c;
+    border-color: #9e2c2c;
+}
+.btn-end:hover {
+    border-color: #6f1d1d;
+    background-color: #6f1d1d;
+}
+.btn-end:active {
+    border-color: #6f1d1d !important;
+    background-color: #6f1d1d !important;
+}
+.btn-check:checked+.btn{
+    color: #fff;
+    background-color: rgb(30, 140, 30);
+    border-color:rgb(30, 140, 30);
+}
+.Interview-Type{
+    display: flex;
+    justify-content: space-between;
+}

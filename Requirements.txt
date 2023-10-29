@@ -1,0 +1,48 @@
+Sample: https://grow.google/certificates/interview-warmup/
+
+// Implementing the following UI and collecting relevant API data is our scope for now.
+// Api design is not our scope as front-end.
+
+UI Requirements => {
+
+	1) Option to upload resume
+	2) Option to select the type of interview - technical or non-technical
+	3) Option to specify the technologies you want to PRACTICE during the interview.
+    OR
+	3) There will be a quick start button that takes users directly to the interview page
+
+}
+
+Task 1 => Start interview Backend API Call Requirements => {
+    
+    JSON format:
+    
+    sections{
+        number of sections:
+        sections array: [section id, section name, questions]
+    }
+
+}
+
+Task 2 => {
+    
+    1) Guide user to and from each section questions
+    2) Record Answer (RAW)
+    OR
+    2) Record and transcribe Answer
+    3) Make API call of the Answer.
+
+}
+
+Task 3 => {
+
+    Receive JSON report of the interview.{
+
+        1) Each question review
+        2) Each section review
+        3) Strengths
+        4) Weaknesses that require improvement
+    
+    }
+
+}
