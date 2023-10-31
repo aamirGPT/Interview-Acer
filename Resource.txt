@@ -1,0 +1,6 @@
+Color Palette:
+    --Primary-Text-Color: #cf6100;
+    --Secondary-Text-Color: #313030;
+    --Third-Text-Color: #5b5a58;
+    --Background-Color: #FDFDFD; 
+    --footer-background: #f3f2f0;

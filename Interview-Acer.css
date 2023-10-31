@@ -1,13 +1,17 @@
 :root {
-    --light-gray: #f7f8fa;
-    --text-gray: #555e6d;
+    --Primary-Text-Color: #cf6100;
+    --Secondary-Text-Color: #313030;
+    --Third-Text-Color: #5b5a58;
+    --Background-Color: #fdfdfd;
+    --footer-background: #f3f2f0;
+    --divider-color: #e0e0e0;
 }
 
 * {
     margin: 0;
     padding: 0;
-    font-family: "Satoshi", sans-serif;
-    color: var(--text-gray);
+    font-family: Graphik, sans-serif;
+    color: var(--Text-Headings);
 }
 
 html,
@@ -18,7 +22,6 @@ body {
 body {
     display: flex;
     flex-direction: column;
-    background-color: var(--light-gray);
 }
 body::-webkit-scrollbar {
     display: none;
@@ -26,34 +29,48 @@ body::-webkit-scrollbar {
 
 #head-ribbon {
     display: flex;
-    height: 4rem;
+    height: 6rem;
     padding: 10px;
-    background-color: #fff;
+    background-color: var(--Background-Color);
     justify-content: center;
     align-items: center;
+    text-align: center;
     font-size: 1.5rem;
-    font-weight: 600;
-    border-bottom: 1px solid rgb(230, 234, 242);
+    font-weight: 700;
+    border-bottom: 1px solid #E6EAF2;
+    color: var(--Primary-Text-Color);
+    box-shadow: 0 6px 4px rgba(0, 0, 0, 0.1);
 }
 i {
-    color: white;
+    color: #fff;
 }
-
 .content-wrapper {
     display: flex;
-    margin: auto;
-    width: fit-content;
-    padding-top: 100px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10vw;
+}
+.content-wrapper-section {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex: 1; /* Allow content to grow and take up remaining space */
+    flex: 1;
+    /* margin: auto; */
+    /* height: 100%; */
+    /* flex: 1; Allow content to grow and take up remaining space */
+}
+.divider {
+    height: 80%;
+    border: 1px solid var(--divider-color);
 }
 
 .content-title {
     width: auto;
     font-size: 3.25rem;
-    font-weight: 900;
+    text-align: center;
+    color: var(--Primary-Text-Color);
 }
 
 .content-subtext {
@@ -64,16 +81,17 @@ i {
     display: flex;
     font-size: 1.2rem;
     margin: 20px 0;
+    color: var(--Secondary-Text-Color);
 }
 
 #footer-ribbon {
     display: flex;
     justify-content: center;
-    background-color: #555e6d;
+    background-color: var(--footer-background);
     padding: 7px;
     margin-top: 20px;
     font-size: 0.75rem;
-    color: #fff;
+    color: var(--Third-Text-Color);
     width: 100%;
 }
 
@@ -95,6 +113,20 @@ i {
 .form-nav-buttons {
     min-width: 30%;
 }
+.btn {
+    background-color: var(--Primary-Text-Color);
+    border-color: var(--Primary-Text-Color);
+}
+.btn:hover {
+    border-color: var(--Primary-Text-Color);
+    background-color: var(--Background-Color);
+    color: var(--Primary-Text-Color);
+}
+.btn:active {
+    background-color: var(--Primary-Text-Color) !important;
+    border-color: var(--Primary-Text-Color) !important;
+    color: var(--Background-Color) !important;
+}
 .btn-end {
     background-color: #9e2c2c;
     border-color: #9e2c2c;
@@ -107,12 +139,54 @@ i {
     border-color: #6f1d1d !important;
     background-color: #6f1d1d !important;
 }
-.btn-check:checked+.btn{
+.btn-check:checked + .btn {
     color: #fff;
     background-color: rgb(30, 140, 30);
-    border-color:rgb(30, 140, 30);
+    border-color: rgb(30, 140, 30);
 }
-.Interview-Type{
+.Interview-Type {
     display: flex;
     justify-content: space-between;
+}
+.content-buttons {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+    flex-direction: column;
+}
+
+/* Responsive UI */
+@media only screen and (max-width: 768px) {
+    /* Your CSS styles for iPhone SE go here */
+    .content-wrapper {
+        flex-direction: column;
+        padding-top: 20px;
+    }
+    .content-wrapper-section {
+        flex: 0;
+    }
+    .content-title {
+        font-size: 2rem; /* Adjust as needed for smaller screens */
+    }
+    .divider {
+        height: 1px;
+        width: 80%;
+        border: none;
+        border-top: 1px solid #000;
+    }
+    .content-subtext {
+        font-size: 1rem; /* Adjust as needed for smaller screens */
+    }
+    #head-ribbon {
+        font-size: 1.2rem; /* Adjust as needed for smaller screens */
+    }
+    #footer-ribbon {
+        font-size: 0.6rem; /* Adjust as needed for smaller screens */
+    }
+}
+/* UI above mobile screen */
+@media only screen and (min-width: 769px) {
+    .divider {
+        margin: 0 20px;
+    }
 }
