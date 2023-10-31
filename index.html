@@ -30,36 +30,73 @@
                 <div class="content-subtext">
                     A quick way to get your interview done right.
                 </div>
-                <!-- <div class="content-buttons">
-                    <button
-                        type="button"
-                        class="btn btn-primary"
-                        id="btn-begin"
-                    >
-                        Let's Begin
-                    </button>
-                </div> -->
             </div>
             <div class="divider"></div>
             <div class="content-wrapper-section section-2">
-                <div class="content-buttons">
+                <div class="content-buttons" id="content-buttons">
                     <button
                         type="button"
-                        class="btn btn-primary"
-                        id="btn-begin"
+                        class="btn"
+                        id="btn-practice"
+                        disabled
                     >
                         Practice Interview
                     </button>
-                    <button
-                        type="button"
-                        class="btn btn-primary"
-                        id="btn-begin"
-                    >
+                    <button type="button" class="btn" id="btn-proceed" disabled>
                         Proceed to Interview
                     </button>
+                    <button type="button" class="btn" id="btn-upload">
+                        Upload Job Information
+                    </button>
                 </div>
+                <form class="popup-form" id="upload-details-form" method="post">
+                    <div class="mb-3">
+                        <label for="optionResume" class="form-label"
+                            >Upload Resume in .pdf</label
+                        >
+                        <div class="error-message"></div>
+                        <input
+                            type="file"
+                            class="form-control"
+                            id="optionResume"
+                            accept=".pdf"
+                            required
+                        />
+                    </div>
+                    <div class="mb-3">
+                        <div class="error-message"></div>
+                        <label for="floatingTextarea2" class="form-label"
+                            >Enter Job Description Below:</label
+                        >
+                        <textarea
+                            class="form-control"
+                            id="floatingTextarea2"
+                            rows="3"
+                            required
+                        ></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <div class="content-button">
+                            <div class="mb-0 form-nav-buttons-container">
+                                <button
+                                    type="button"
+                                    class="btn btn-primary form-nav-buttons"
+                                    id="btn-upload-cancel"
+                                >
+                                    Cancel
+                                </button>
+                                <button
+                                    type="button"
+                                    class="btn btn-primary form-nav-buttons btn-next"
+                                    id="btn-upload-submit"
+                                >
+                                    Submit
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
             </div>
-
             <!-- <form class="popup-form" id="popup-form1" method="post">
                 <div class="mb-3">
                     <label for="optionResume" class="form-label"
