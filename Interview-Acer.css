@@ -116,6 +116,7 @@ i {
 .btn {
     background-color: var(--Primary-Text-Color);
     border-color: var(--Primary-Text-Color);
+    font-size: 1rem;
 }
 .btn:hover {
     border-color: var(--Primary-Text-Color);
@@ -182,6 +183,9 @@ i {
     }
     #footer-ribbon {
         font-size: 0.6rem; /* Adjust as needed for smaller screens */
+    }
+    .btn {
+        font-size: 0.8rem; /* Adjust as needed for smaller screens */
     }
 }
 /* UI above mobile screen */
