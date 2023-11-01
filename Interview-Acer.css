@@ -148,12 +148,13 @@ i {
 }
 .btn-check:checked + .btn {
     color: #fff;
-    background-color: rgb(30, 140, 30);
-    border-color: rgb(30, 140, 30);
+    background-color: var(--Primary-Text-Color);
+    border-color: var(--Primary-Text-Color);
 }
 .Interview-Type {
     display: flex;
     justify-content: space-between;
+    gap: 10px;
 }
 .content-buttons {
     display: flex;
@@ -164,6 +165,14 @@ i {
 .error-message{
     font-size: 0.9rem;
     color: var(--error-code);
+}
+.RadioBtn{
+    background-color: var(--Third-Text-Color);
+    border-color: var(--Third-Text-Color);
+    color: var(--divider-color);
+}
+.RadioBtn:not(:checked):hover{
+    border-color: var(--Third-Text-Color);
 }
 
 /* Responsive UI */

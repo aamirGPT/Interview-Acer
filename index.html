@@ -57,7 +57,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="floatingTextarea2" class="form-label"
-                        >Enter Job Description Below:</label
+                            >Enter Job Description Below:</label
                         >
                         <div class="error-message" id="jobDescriptionErr"></div>
                         <textarea
@@ -80,12 +80,49 @@
                                 <button
                                     type="button"
                                     class="btn btn-primary form-nav-buttons btn-next"
-                                    id="btn-upload-submit"
+                                    id="btn-upload-proceed"
                                 >
                                     Proceed to Interview
                                 </button>
                             </div>
                         </div>
+                    </div>
+                </form>
+                <form
+                    method="post"
+                    class="popup-form interviewOptions"
+                    id="interviewOptions"
+                >
+                    <label for="Interview-Type" class="mb-3"
+                        >Select the type of Interview:</label
+                    >
+                    <div class="error-message" id="error-message-radio"></div>
+                    <div class="Interview-Type mb-3">
+                        <input
+                            type="radio"
+                            class="btn-check"
+                            name="options-base"
+                            id="Technical"
+                            autocomplete="off"
+                            required
+                        />
+                        <label class="btn RadioBtn" for="Technical"
+                            >Technical</label
+                        >
+                        <input
+                            type="radio"
+                            class="btn-check"
+                            name="options-base"
+                            id="Non-Technical"
+                            autocomplete="off"
+                            required
+                        />
+                        <label class="btn RadioBtn" for="Non-Technical"
+                            >Non-Technical</label
+                        >
+                    </div>
+                    <div class="technicalChoices" id="technicalChoices">
+                        Pending Work
                     </div>
                 </form>
             </div>

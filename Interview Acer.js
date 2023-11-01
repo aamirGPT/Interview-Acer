@@ -1,9 +1,10 @@
 let btnUpload = document.getElementById("btn-upload");
-let btnUploadSubmit = document.getElementById("btn-upload-submit");
+let btnUploadProceed = document.getElementById("btn-upload-proceed");
 let btnUploadCancel = document.getElementById("btn-upload-cancel");
 let btnList = document.getElementById("content-buttons");
 
 let uploadForm = document.getElementById("upload-details-form");
+let interviewOptionsForm = document.getElementById("interviewOptions");
 
 // Function to show a Element
 let showElement = (element) => {
@@ -21,16 +22,26 @@ btnUpload.addEventListener("click", () => {
     showElement(uploadForm);
 });
 
-btnUploadSubmit.addEventListener("click", () => {
-    // showElement(btnList);
-    // hideElement(uploadForm);
+btnUploadProceed.addEventListener("click", () => {
     if (validateForm()) {
-        // If form is valid, proceed with submission
+        let resumeFile = document.getElementById("optionResume").value;
+        let jobDescription = document.getElementById("floatingTextarea2").value;
+
+        let formData = {
+            resume: resumeFile,
+            jobDescription: jobDescription,
+        };
+        hideElement(uploadForm);
+        showElement(interviewOptionsForm);
+        // Use the formData object as needed (e.g., send it to a server, process it further, etc.)
+        console.log(formData);
+        // ... (additional code for handling the form data)
+
         alert("Form submitted successfully!");
-        // You can add further code to handle form submission here
     }
 });
 btnUploadCancel.addEventListener("click", () => {
+    uploadForm.reset();
     showElement(btnList);
     hideElement(uploadForm);
 });
