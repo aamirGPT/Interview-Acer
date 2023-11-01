@@ -34,14 +34,6 @@
             <div class="divider"></div>
             <div class="content-wrapper-section section-2">
                 <div class="content-buttons" id="content-buttons">
-                    <button
-                        type="button"
-                        class="btn"
-                        id="btn-practice"
-                        disabled
-                    >
-                        Practice Interview
-                    </button>
                     <button type="button" class="btn" id="btn-proceed" disabled>
                         Proceed to Interview
                     </button>
@@ -54,7 +46,7 @@
                         <label for="optionResume" class="form-label"
                             >Upload Resume in .pdf</label
                         >
-                        <div class="error-message"></div>
+                        <div class="error-message" id="fileErr"></div>
                         <input
                             type="file"
                             class="form-control"
@@ -64,10 +56,10 @@
                         />
                     </div>
                     <div class="mb-3">
-                        <div class="error-message"></div>
                         <label for="floatingTextarea2" class="form-label"
-                            >Enter Job Description Below:</label
+                        >Enter Job Description Below:</label
                         >
+                        <div class="error-message" id="jobDescriptionErr"></div>
                         <textarea
                             class="form-control"
                             id="floatingTextarea2"
@@ -90,149 +82,13 @@
                                     class="btn btn-primary form-nav-buttons btn-next"
                                     id="btn-upload-submit"
                                 >
-                                    Submit
+                                    Proceed to Interview
                                 </button>
                             </div>
                         </div>
                     </div>
                 </form>
             </div>
-            <!-- <form class="popup-form" id="popup-form1" method="post">
-                <div class="mb-3">
-                    <label for="optionResume" class="form-label"
-                        >Upload Resume in .pdf</label
-                    >
-                    <div class="error-message"></div>
-                    <input
-                        type="file"
-                        class="form-control"
-                        id="optionResume"
-                        accept=".pdf"
-                        required
-                    />
-                </div>
-                <div class="content-button">
-                    <div class="mb-0 form-nav-buttons-container">
-                        <button
-                            type="button"
-                            class="btn btn-primary form-nav-buttons btn-end"
-                            id="btn-end"
-                        >
-                            <i class="fa fa-times"></i>
-                        </button>
-                        <button
-                            type="button"
-                            class="btn btn-primary form-nav-buttons btn-next"
-                            id="btn-next"
-                        >
-                            <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                        </button>
-                    </div>
-                </div>
-            </form>
-            <form class="popup-form" id="popup-form2">
-                <div class="mb-3">
-                    <label>Enter Job Description Below:</label>
-                </div>
-                <div class="mb-3">
-                    <div class="error-message"></div>
-                    <div class="form-floating">
-                        <textarea
-                            class="form-control"
-                            id="floatingTextarea2"
-                            required
-                        ></textarea>
-                    </div>
-                </div>
-                <div class="content-button">
-                    <div class="mb-0 form-nav-buttons-container">
-                        <button
-                            type="button"
-                            class="btn btn-primary form-nav-buttons"
-                            id="btn-back-pform2"
-                        >
-                            <i class="fa fa-arrow-left"></i>
-                        </button>
-                        <button
-                            type="button"
-                            class="btn btn-primary form-nav-buttons btn-next"
-                            id="btn-next-pform2"
-                        >
-                            <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                        </button>
-                    </div>
-                </div>
-            </form>
-
-            <form class="popup-form" id="popup-form3">
-                <div class="mb-3">
-                    <label for="Interview-Type" class="mb-3">Select the type of Interview:</label>
-                    <div class="error-message" id="error-message-radio"></div>
-                    <div class="Interview-Type">
-                        <input
-                            type="radio"
-                            class="btn-check"
-                            name="options-base"
-                            id="Technical"
-                            autocomplete="off"
-                            required
-                        />
-                        <label class="btn" for="Technical">Technical</label>
-
-                        <input
-                            type="radio"
-                            class="btn-check"
-                            name="options-base"
-                            id="Non-Technical"
-                            autocomplete="off"
-                            required
-                        />
-                        <label class="btn" for="Non-Technical">Non-Technical</label>
-                    </div>
-                </div>
-                <div class="content-button">
-                    <div class="mb-0 form-nav-buttons-container">
-                        <button
-                            type="button"
-                            class="btn btn-primary form-nav-buttons"
-                            id="btn-back-pform3"
-                        >
-                            <i class="fa fa-arrow-left"></i>
-                        </button>
-                        <button
-                            type="button"
-                            class="btn btn-primary form-nav-buttons btn-next"
-                            id="btn-next-pform3"
-                        >
-                            <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                        </button>
-                    </div>
-                </div>
-            </form>
-
-            <form class="popup-form" id="popup-form4">
-                <div class="mb-3">
-                    Form in construction xD.
-                </div>
-                <div class="content-button">
-                    <div class="mb-0 form-nav-buttons-container">
-                        <button
-                            type="button"
-                            class="btn btn-primary form-nav-buttons"
-                            id="btn-back-pform4"
-                        >
-                            <i class="fa fa-arrow-left"></i>
-                        </button>
-                        <button
-                            type="button"
-                            class="btn btn-primary form-nav-buttons btn-next"
-                            id="btn-next-pform4"
-                        >
-                            <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                        </button>
-                    </div>
-                </div>
-            </form> -->
         </div>
         <footer id="footer-ribbon">@copyright 2023</footer>
         <script
