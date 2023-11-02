@@ -171,6 +171,9 @@ i {
     border-color: var(--divider-color);
     color: var(--Primary-Text-Color);
 }
+.technicalChoice{
+    display: none;
+}
 
 /* Responsive UI */
 @media only screen and (max-width: 768px) {
