@@ -70,41 +70,4 @@ nonTechnicalRadio.addEventListener("change", () => {
     technicalChoice.style.display = "none";
 });
 
-// Event listener for the resume input field
-// let optionResume = document.getElementById("optionResume");
-// optionResume.addEventListener("input", () => {
-//     let fileErr = document.getElementById("fileErr");
-//     fileErr.textContent = "";
-// });
-
-// Event listener for the job description textarea
-// let floatingTextarea2 = document.getElementById("floatingTextarea2");
-// floatingTextarea2.addEventListener("input", () => {
-//     let jobDescriptionErr = document.getElementById("jobDescriptionErr");
-//     jobDescriptionErr.textContent = "";
-// });
-
-
-// Function to validate form fields
-// let validateForm = () => {
-//     let resumeFile = document.getElementById("optionResume");
-//     let jobDescription = document.getElementById("floatingTextarea2");
-//     let fileErr = document.getElementById("fileErr");
-//     let jobDescriptionErr = document.getElementById("jobDescriptionErr");
-//     let valid = true;
-
-//     // Reset error messages
-//     fileErr.textContent = "";
-//     jobDescriptionErr.textContent = "";
-
-//     if (resumeFile.value === "") {
-//         fileErr.textContent = "Please upload a resume.*";
-//         valid = false;
-//     }
-
-//     if (jobDescription.value === "") {
-//         jobDescriptionErr.textContent = "Please enter a job description.*";
-//         valid = false;
-//     }
-//     return valid;
-// };
+// Author: Mohammed Aamir Mansoori

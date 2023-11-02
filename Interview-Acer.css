@@ -60,9 +60,6 @@ i {
     justify-content: center;
     align-items: center;
     flex: 1;
-    /* margin: auto; */
-    /* height: 100%; */
-    /* flex: 1; Allow content to grow and take up remaining space */
 }
 .divider {
     height: 80%;
@@ -107,7 +104,6 @@ i {
     padding: 25px;
     background-color: #fff;
     color: var(--text-gray);
-    /* width: -webkit-fill-available; */
 }
 .form-nav-buttons-container {
     display: flex;
@@ -222,3 +218,5 @@ i {
         margin: 0 20px;
     }
 }
+
+/* Author: Mohammed Aamir Mansoori */
