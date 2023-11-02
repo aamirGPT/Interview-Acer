@@ -4,7 +4,8 @@ let btnUploadCancel = document.getElementById("btn-upload-cancel");
 let btnList = document.getElementById("content-buttons");
 
 let uploadForm = document.getElementById("upload-details-form");
-let interviewOptionsForm = document.getElementById("interviewOptions");
+let technicalRadio = document.getElementById("Technical");
+let nonTechnicalRadio = document.getElementById("Non-Technical");
 
 // Function to show a Element
 let showElement = (element) => {
@@ -22,23 +23,30 @@ btnUpload.addEventListener("click", () => {
     showElement(uploadForm);
 });
 
-btnUploadProceed.addEventListener("click", () => {
-    if (validateForm()) {
-        let resumeFile = document.getElementById("optionResume").value;
-        let jobDescription = document.getElementById("floatingTextarea2").value;
+//Form Data Object
+let formData = new FormData();
 
-        let formData = {
-            resume: resumeFile,
-            jobDescription: jobDescription,
-        };
-        hideElement(uploadForm);
-        showElement(interviewOptionsForm);
+//Setting Default Value to Form Data Object
+formData.set("interviewType", "Non-Technical");
+
+btnUploadProceed.addEventListener("click", () => {
+        let resumeFile = document.getElementById("optionResume").files[0];
+        let jobDescription = document.getElementById("floatingTextarea2").value;
+        
+        formData.append("resume", resumeFile);
+        formData.append("jobDescription", jobDescription);
+
         // Use the formData object as needed (e.g., send it to a server, process it further, etc.)
-        console.log(formData);
+        let formDataObject = {};
+
+        for (let [key, value] of formData.entries()) {
+            formDataObject[key] = value;
+        }
+
+        console.log(formDataObject);
         // ... (additional code for handling the form data)
 
         alert("Form submitted successfully!");
-    }
 });
 btnUploadCancel.addEventListener("click", () => {
     uploadForm.reset();
@@ -60,26 +68,36 @@ floatingTextarea2.addEventListener("input", () => {
     jobDescriptionErr.textContent = "";
 });
 
+// Event listener for Technical radio button
+technicalRadio.addEventListener("change", () => {
+    formData.set("interviewType", "Technical");
+});
+
+// Event listener for Non-Technical radio button
+nonTechnicalRadio.addEventListener("change", () => {
+    formData.set("interviewType", "Non-Technical");
+});
+
 // Function to validate form fields
-let validateForm = () => {
-    let resumeFile = document.getElementById("optionResume");
-    let jobDescription = document.getElementById("floatingTextarea2");
-    let fileErr = document.getElementById("fileErr");
-    let jobDescriptionErr = document.getElementById("jobDescriptionErr");
-    let valid = true;
+// let validateForm = () => {
+//     let resumeFile = document.getElementById("optionResume");
+//     let jobDescription = document.getElementById("floatingTextarea2");
+//     let fileErr = document.getElementById("fileErr");
+//     let jobDescriptionErr = document.getElementById("jobDescriptionErr");
+//     let valid = true;
 
-    // Reset error messages
-    fileErr.textContent = "";
-    jobDescriptionErr.textContent = "";
+//     // Reset error messages
+//     fileErr.textContent = "";
+//     jobDescriptionErr.textContent = "";
 
-    if (resumeFile.value === "") {
-        fileErr.textContent = "Please upload a resume.*";
-        valid = false;
-    }
+//     if (resumeFile.value === "") {
+//         fileErr.textContent = "Please upload a resume.*";
+//         valid = false;
+//     }
 
-    if (jobDescription.value === "") {
-        jobDescriptionErr.textContent = "Please enter a job description.*";
-        valid = false;
-    }
-    return valid;
-};
+//     if (jobDescription.value === "") {
+//         jobDescriptionErr.textContent = "Please enter a job description.*";
+//         valid = false;
+//     }
+//     return valid;
+// };

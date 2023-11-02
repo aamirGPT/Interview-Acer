@@ -167,12 +167,9 @@ i {
     color: var(--error-code);
 }
 .RadioBtn{
-    background-color: var(--Third-Text-Color);
-    border-color: var(--Third-Text-Color);
-    color: var(--divider-color);
-}
-.RadioBtn:not(:checked):hover{
-    border-color: var(--Third-Text-Color);
+    background-color: var(--divider-color);
+    border-color: var(--divider-color);
+    color: var(--Primary-Text-Color);
 }
 
 /* Responsive UI */
