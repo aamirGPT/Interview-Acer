@@ -170,6 +170,11 @@ i {
 .technicalChoice{
     display: none;
 }
+.Note{
+    display: flex;
+    font-size: 0.9rem;
+    color: var(--Primary-Text-Color);
+}
 
 /* Responsive UI */
 @media only screen and (max-width: 768px) {
@@ -210,6 +215,9 @@ i {
     }
     #floatingTextarea2{
         font-size: 1em;
+    }
+    .Note{
+        font-size: 0.8em;
     }
 }
 /* UI above mobile screen */
