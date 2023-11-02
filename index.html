@@ -34,8 +34,8 @@
             <div class="divider"></div>
             <div class="content-wrapper-section section-2">
                 <div class="content-buttons" id="content-buttons">
-                    <button type="button" class="btn" id="btn-proceed" disabled>
-                        Proceed to Interview
+                    <button type="button" class="btn" id="btn-quickStart">
+                        QuickStart Interview
                     </button>
                     <button type="button" class="btn" id="btn-upload">
                         Upload Job Information
@@ -120,6 +120,68 @@
                                     type="button"
                                     class="btn btn-primary form-nav-buttons btn-next"
                                     id="btn-upload-proceed"
+                                >
+                                    Proceed to Interview
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <form class="popup-form" id="quickStart-form" method="post">
+                    <div class="mb-3">
+                        <div class="mb-3">
+                            <label for="Interview-Type" class="mb-3"
+                                >Select the type of Interview:</label
+                            >
+                            <div class="Interview-Type mb-3">
+                                <input
+                                    type="radio"
+                                    class="btn-check"
+                                    name="options-base"
+                                    id="quickStartTechnical"
+                                    autocomplete="off"
+                                    required
+                                />
+                                <label class="btn RadioBtn" for="quickStartTechnical"
+                                    >Technical</label
+                                >
+                                <input
+                                    type="radio"
+                                    class="btn-check"
+                                    name="options-base"
+                                    id="quickStartNon-Technical"
+                                    autocomplete="off"
+                                    checked
+                                    required
+                                />
+                                <label class="btn RadioBtn" for="quickStartNon-Technical"
+                                    >Non-Technical</label
+                                >
+                            </div>
+                            <div class="technicalChoice" id="technicalChoice-QuickStart">
+                                <div class="input-group mb-3">
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        placeholder="Type Technology of Choice"
+                                        id="inputTechnicalChoiceQuickStart"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-button">
+                            <div class="mb-0 form-nav-buttons-container">
+                                <button
+                                    type="button"
+                                    class="btn btn-primary form-nav-buttons"
+                                    id="btn-QuickStart-Cancel"
+                                >
+                                    Cancel
+                                </button>
+                                <button
+                                    type="button"
+                                    class="btn btn-primary form-nav-buttons btn-next"
+                                    id="btn-QuickStart-Interview"
                                 >
                                     Proceed to Interview
                                 </button>
