@@ -41,6 +41,9 @@ let resetForm = (form) => {
     form.reset();
     showElement(btnList);
     hideElement(form);
+    nonTechnicalRadio.checked = true;
+    technicalChoice.style.display = "none";
+    technicalChoiceQS.style.display = "none";
 };
 
 // Event listeners
